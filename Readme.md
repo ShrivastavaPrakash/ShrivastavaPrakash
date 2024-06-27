@@ -1,4 +1,52 @@
 # Hi there, I'm Prakash Kumar! 👋
+pip install Pillow
+from PIL import Image, ImageDraw, ImageFont
+
+# Create an image with a dark background
+width, height = 1200, 400
+background_color = (10, 10, 50)
+image = Image.new('RGB', (width, height), background_color)
+draw = ImageDraw.Draw(image)
+
+# Load a font
+font_path = "arial.ttf"  # Ensure this path is correct on your system
+title_font_size = 72
+subtitle_font_size = 36
+font_title = ImageFont.truetype(font_path, title_font_size)
+font_subtitle = ImageFont.truetype(font_path, subtitle_font_size)
+
+# Define text and position
+title_text = "Prakash Kumar"
+subtitle_text = "Full Stack Data Scientist & Machine Learning Engineer"
+contact_text = "+91-9721001545"
+
+# Define text colors
+text_color = (255, 255, 255)
+
+# Calculate text width and height to center it
+title_width, title_height = draw.textsize(title_text, font=font_title)
+subtitle_width, subtitle_height = draw.textsize(subtitle_text, font=font_subtitle)
+contact_width, contact_height = draw.textsize(contact_text, font=font_subtitle)
+
+title_x = (width - title_width) / 2
+title_y = (height - title_height) / 3
+subtitle_x = (width - subtitle_width) / 2
+subtitle_y = title_y + title_height + 20
+contact_x = (width - contact_width) / 2
+contact_y = subtitle_y + subtitle_height + 20
+
+# Draw text on image
+draw.text((title_x, title_y), title_text, fill=text_color, font=font_title)
+draw.text((subtitle_x, subtitle_y), subtitle_text, fill=text_color, font=font_subtitle)
+draw.text((contact_x, contact_y), contact_text, fill=text_color, font=font_subtitle)
+
+# Save the image
+image_path = "profile_banner.png"
+image.save(image_path)
+
+print(f"Banner saved as {image_path}")
+
+
 
 ![Profile Banner](https://yourimageurl.com/banner.png)
 
