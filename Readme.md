@@ -1,6 +1,6 @@
 # Hi there, I'm Prakash Kumar! 👋
 
-![Profile Banner](https://www.canva.com/design/DAGJVQnf_WA/MMaHeocAVNdQcKE5N49FhA/edit?utm_content=DAGJVQnf_WA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+![Profile Banner](https://github.com/ShrivastavaPrakash/ShrivastavaPrakash/blob/main/Add%20a%20heading.png)
 
 
 
